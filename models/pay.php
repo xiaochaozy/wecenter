@@ -38,6 +38,11 @@ class pay_class extends AWS_MODEL
 				'status' =>'succ'
 			), 'trade_sn = "'.$trade_sn.'"');
 	}
+	
+	public function getorder($id){
+		$data=$this->fetch_row('pay_account','id =' .$id);
+		return $data;	
+	}
 
 	
 }

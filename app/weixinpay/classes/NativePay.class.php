@@ -1,5 +1,5 @@
 <?php
-require_once PC_PATH.'modules'.DIRECTORY_SEPARATOR.'weixinpay'.DIRECTORY_SEPARATOR.'classes'.DIRECTORY_SEPARATOR."WxPayApi.class.php";
+require_once ROOT_PATH.'app'.DIRECTORY_SEPARATOR.'weixinpay'.DIRECTORY_SEPARATOR.'classes'.DIRECTORY_SEPARATOR."WxPayApi.class.php";
 
 /**
  * 
