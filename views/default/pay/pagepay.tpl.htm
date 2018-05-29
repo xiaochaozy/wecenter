@@ -183,13 +183,13 @@
         <h2 id="tab4" name="tab">退 款 查 询</h2>
         <h2 id="tab5" name="tab">交 易 关 闭</h2>
     </div>
-        <form name=alipayment action=pagepay.php method=post target="_blank">
+        <form name=alipayment action="/?/pay/" method=post target="_blank">
             <div id="body1" class="show" name="divcontent">
                 <dl class="content">
                     <dt>商户订单号
 ：</dt>
                     <dd>
-                        <input id="WIDout_trade_no" name="WIDout_trade_no" />
+                        <input id="WIDout_trade_no" name="WIDout_trade_no" value="<?php echo $this->trade_sn;?>" />
                     </dd>
                     <hr class="one_line">
                     <dt>订单名称
@@ -212,7 +212,7 @@
                     <dt></dt>
                     <dd id="btn-dd">
                         <span class="new-btn-login-sp">
-                            <button class="new-btn-login" type="submit" style="text-align:center;">付 款</button>
+                            <button class="new-btn-login" type="submit" name="dosubmit" value="1" style="text-align:center;">付 款</button>
                         </span>
                         <span class="note-help">如果您点击“付款”按钮，即表示您同意该次的执行操作。</span>
                     </dd>
@@ -396,7 +396,7 @@
 		sNow += String(vNow.getMinutes());
 		sNow += String(vNow.getSeconds());
 		sNow += String(vNow.getMilliseconds());
-		document.getElementById("WIDout_trade_no").value =  sNow;
+		//document.getElementById("WIDout_trade_no").value =  sNow;
 		document.getElementById("WIDsubject").value = "测试";
 		document.getElementById("WIDtotal_amount").value = "0.01";
 	}
