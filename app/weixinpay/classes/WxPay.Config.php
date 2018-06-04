@@ -30,11 +30,11 @@ const KEY = 'jlE8nAQ43qijFvQZA4QvsjaQ9fsulJSA';
 const APPSECRET = '8ada6f2d2cd00e735817eca1ca4b1e70';
 */
 	//律神器
-	const APPID = 'wx8a2be0e028f6f6aa';//'';//wx8a2be0e028f6f6aa
-	const MCHID = '1270040501';//'';//1270040501
-	const KEY = 'zhonggufaneilvmeng201512101033DO';
+	const APPID = 'wfsdafx8a2befasdfasdf0e028f6f6aa1111111';//'';//wx8a2be0e028f6f6aa
+	const MCHID = '127887877004050122222222';//'';//1270040501
+	const KEY = 'zhonggudfsfsadfsfaneilvmeng201512101033DO';
 	//const APPSECRET = 'e1d3fa76969aea77c450457c227218bf';//'d4624c36b6795d1d99dcf0547af5443d';
-	const APPSECRET = 'e1d3fa76969aea77c450457c227218bf';
+	const APPSECRET = 'e1d3ffdsafadsfa7jhjkjkj6969aea77c450457c227218bf';
 
 	/*
 	const APPID = 'wx426b3015555a46be';
