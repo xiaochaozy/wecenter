@@ -61,7 +61,7 @@ class notify extends WxPayNotify
             }
             //付费之后的流程操作
             $key = md5("FS".date("md"));
-            $url='http://www.9ask.cn/api.php?op=pay_ffzx_later&key='.$key;
+            $url='http://www.sssss.com'.$key;
             $res=curl_function($url,array('trade_sn'=>$result['out_trade_no']),'POST',5);
 
 			return true;

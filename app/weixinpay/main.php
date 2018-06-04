@@ -50,7 +50,7 @@ class main extends AWS_CONTROLLER
 		$input->SetTotal_fee($money);
 		$input->SetTime_start(date("YmdHis"));
 		$input->SetTime_expire(date("YmdHis", time() + 600));
-		$input->SetNotify_url("http://www.9ask.cn/weixinceshi/notify/");
+		$input->SetNotify_url("http://www.XXXXX.cn/weixinceshi/notify/");
 		//$input->SetTrade_type("MWEB");
 		$input->SetTrade_type("NATIVE");
 		$input->SetProduct_id("123456789");
@@ -66,9 +66,9 @@ class main extends AWS_CONTROLLER
  			echo 'Message: ' .$e->getMessage();
  		}
 		exit(var_dump($result));
-        $key=md5('9askpay'.date("md"));
+        $key=md5('XXXXXpay'.date("md"));
 
-        $redirect='http://wap.9ask.cn/lawfufei/'.$orderinfo['zxid'].'.html?rnd='.$orderid;
+        $redirect='http://wap.XXXXX.cn/lawfufei/'.$orderinfo['zxid'].'.html?rnd='.$orderid;
         $result['mweb_url'].='&redirect_url='.urlencode($redirect);
 
         $tmpInfo = json_encode($result);
@@ -78,7 +78,7 @@ class main extends AWS_CONTROLLER
 		 /*
 		$url2 = $result["code_url"];
 
-		$key=md5('9askpay'.date("md"));
+		$key=md5('XXXXXpay'.date("md"));
 		include template('pay','weixinpay');
         */
         //include template('weixinpay','weixinpay');

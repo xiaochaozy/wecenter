@@ -15,7 +15,7 @@ class index {
 		$input = new WxPayUnifiedOrder();
         if(!isset($_GET['orderid'])){
             $userid=param::get_cookie('_userid');
-            $pay_url='http://www.9ask.cn/index.php?m=pay&c=pay_ffzx&a=public_weixin_ffzx&h5zf=1&zxid='.$_GET['zxid'].'&from='.$_GET['from'].'&userid='.$userid;
+            $pay_url='http://www.XXXXX.cn/index.php?m=pay&c=pay_ffzx&a=public_weixin_ffzx&h5zf=1&zxid='.$_GET['zxid'].'&from='.$_GET['from'].'&userid='.$userid;
             $id=curl_function($pay_url);
         }else{
             $id=trim(strip_tags($_GET['orderid']));
@@ -33,23 +33,23 @@ class index {
 		$input->SetTotal_fee($money);
 		$input->SetTime_start(date("YmdHis"));
 		$input->SetTime_expire(date("YmdHis", time() + 600));
-		$input->SetNotify_url("http://www.9ask.cn/weixinceshi/notify/");
+		$input->SetNotify_url("http://www.XXXXX.cn/weixinceshi/notify/");
 		$input->SetTrade_type("MWEB");
 		$input->SetProduct_id("123456789");
         $input->SetSpbill_create_ip($ip);
         //echo $input->GetSpbill_create_ip();
         //echo '<br/>';
 		$result = $notify->GetPayUrl($input);
-        $key=md5('9askpay'.date("md"));
+        $key=md5('XXXXXpay'.date("md"));
 
         if($orderinfo['pay_type']=='calllawyer_wap' || $orderinfo['pay_type']=='calllawyer_wap3'){//做一个简单的判断进行登陆
             //param::set_cookie('_username',$orderinfo['username']);
             //param::set_cookie('_userid',$orderinfo['userid']);
-            $redirect='http://wap.9ask.cn/lawfufei/'.$orderinfo['zxid'].'.html?rnd='.$orderid;
+            $redirect='http://wap.XXXXX.cn/lawfufei/'.$orderinfo['zxid'].'.html?rnd='.$orderid;
         }else{
             $posids=$orderinfo['pay_type']=='sms_wap'?50:32;
             if($orderinfo['pay_type']=='ydy_wap') $posids=999;
-            $redirect='http://wap.9ask.cn/index.php?m=wap&c=index_other&posids='.$posids.'&a=wxSuccess&id='.$id.'&key='.$key;
+            $redirect='http://wap.XXXXX.cn/index.php?m=wap&c=index_other&posids='.$posids.'&a=wxSuccess&id='.$id.'&key='.$key;
 
             $filename2='wxpay'.'_'.date("Ym",time());
             sendmsglog($redirect,$filename2);
@@ -64,7 +64,7 @@ class index {
         /*
 		$url2 = $result["code_url"];
 
-		$key=md5('9askpay'.date("md"));
+		$key=md5('XXXXXpay'.date("md"));
 		include template('pay','weixinpay');
         */
         //include template('weixinpay','weixinpay');
@@ -109,13 +109,13 @@ class index {
         $input->SetTotal_fee($money);
         $input->SetTime_start(date("YmdHis"));
         $input->SetTime_expire(date("YmdHis", time() + 600));
-        $input->SetNotify_url("http://www.9ask.cn/weixinceshi/notify/");
+        $input->SetNotify_url("http://www.XXXXX.cn/weixinceshi/notify/");
         $input->SetTrade_type("NATIVE");
         $input->SetProduct_id("123456789");
 
         $result = $notify->GetPayUrl($input);
 		$url2 = $result["code_url"];
-		$key=md5('9askpay'.date("md"));
+		$key=md5('XXXXXpay'.date("md"));
         include template('pay','weixinpay');
     }
 
